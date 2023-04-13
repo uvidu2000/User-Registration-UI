@@ -38,7 +38,14 @@ export class AppComponent implements OnInit {
   }
 
   openAddEditEmpForm(){
-    this._dialog.open(EmpAddEditComponent);
+    const dialogRef = this._dialog.open(EmpAddEditComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val){
+        this.getEmployeeList();
+        }
+      },
+    });
   }
 
   getEmployeeList(){
@@ -68,6 +75,21 @@ export class AppComponent implements OnInit {
         this.getEmployeeList();
       },
         error: console.log,
-    })
+    });
+  }
+
+  openEditEmpForm(data: any){
+    const dialogRef = this._dialog.open(EmpAddEditComponent, {
+      data,
+    });
+
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val){
+        this.getEmployeeList();
+        }
+      },
+    });
+    
   }
 }
