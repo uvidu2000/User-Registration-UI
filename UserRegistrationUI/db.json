@@ -32,22 +32,6 @@
       "dob": "2023-04-16T18:30:00.000Z",
       "gender": "female",
       "id": 3
-    },
-    {
-      "firstName": "chn",
-      "lastName": "fdhfh",
-      "email": "fhhf@gmail.com",
-      "dob": "2023-04-19T18:30:00.000Z",
-      "gender": "male",
-      "id": 7
-    },
-    {
-      "firstName": "fggfdhhfdhf",
-      "lastName": "fhdhhffhf",
-      "email": "a@gmail.com",
-      "dob": "2023-04-08T18:30:00.000Z",
-      "gender": "male",
-      "id": 8
     }
   ]
 }
