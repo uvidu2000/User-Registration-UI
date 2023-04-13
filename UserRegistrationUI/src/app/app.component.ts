@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
     'email',
     'dob',
     'gender',
+    'action',
   ];
   dataSource!: MatTableDataSource<any>;
 
@@ -58,5 +59,15 @@ export class AppComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  deleteEmployee(id: number){
+    this._empService.deleteEmployee(id).subscribe({
+      next: (res) => {
+        alert('employee deleted');
+        this.getEmployeeList();
+      },
+        error: console.log,
+    })
   }
 }
